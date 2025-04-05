@@ -10,6 +10,11 @@ import random
 def load_images_from_folder():
     real_path = "/home/amruth22/deepfake_detection_project/archive/Final Dataset/Real"
     fake_path = "/home/amruth22/deepfake_detection_project/archive/Final Dataset/Fake"
+
+
+
+    # add in the FFHQ path here, baically by adding ffhq_path = "/home/amruth22/deepfake_detection_project/..."
+    
     
     images = []
     labels = []
@@ -27,6 +32,8 @@ def load_images_from_folder():
     else:
         real_files = real_files[offset:] 
         selected_real = random.sample(real_files, target_per_category)
+
+    #here also update the ffhq path's offset tracks and target tracks similar to above block 
     
     print(f"Loading {len(selected_real)} real images (starting after image {offset})...")
     for filename in selected_real:
@@ -142,6 +149,9 @@ def main():
     print("Model saved as 'deepfake_detector_model.h5'")
     
     test_image_path = "/home/amruth22/deepfake_detection_project/archive/Final Dataset/Fake/001DDU0NI4.jpg"
+
+    # here for StyleGAN via FFHQ, we can set the path for a randomly chosen png file set as xxxxx.png for test_image_path
+    
     threshold = 0.6  
     
     if os.path.exists(test_image_path):
