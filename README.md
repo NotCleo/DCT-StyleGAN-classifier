@@ -21,4 +21,7 @@ Requirements
         mtcnn (for face detection)
         scikit-learn (for train-test splitting)
 
-Dataset trained on - https://www.kaggle.com/datasets/kshitizbhargava/deepfake-face-images/data
+Dataset trained on 
+
+    https://www.kaggle.com/datasets/kshitizbhargava/deepfake-face-images/data 
+    https://www.kaggle.com/datasets/arnaud58/flickrfaceshq-dataset-ffhq/data
